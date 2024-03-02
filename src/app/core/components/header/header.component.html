@@ -1,0 +1,13 @@
+<mat-toolbar style="height: 80px;">
+  <div class="container d-flex justify-content-between align-items-center">
+    <span>Crypto <span>₿</span></span>
+    <mat-form-field class="mt-4">
+      <mat-label>Selected Currency</mat-label>
+      <mat-select name="currency">
+        @for (currency of currencies; track currency) {
+          <mat-option [value]="currency.value">{{currency.viewValue}}</mat-option>
+        }
+      </mat-select>
+    </mat-form-field>
+  </div>
+</mat-toolbar>

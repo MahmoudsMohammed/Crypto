@@ -1,0 +1,16 @@
+mat-toolbar{
+  background-color: #46518f;
+  span{
+    &{
+      color: white;
+    font-size: 25px;
+    font-weight: 650;
+    }
+    span{
+      color: #ffd43b;
+    }
+  }
+  mat-form-field{
+    width: 180px;
+  }
+}

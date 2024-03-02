@@ -1,4 +1,5 @@
-import { Component , CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { Component , CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
   selector:'app-loader',
@@ -7,4 +8,13 @@ import { Component , CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
   standalone:true,
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class loaderComponent{}
+export class loaderComponent implements OnInit{
+  constructor(private route:Router){
+  };
+
+  ngOnInit(): void {
+    setTimeout(()=>{
+      this.route.navigate(['home']);
+    },3000);
+  }
+}

@@ -1,0 +1,48 @@
+.banner{
+  &{
+    background-image: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,.6)),url('../../../../assets/banner-bg.jpg');
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  }
+  .content{
+    &{
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      color: white;
+      text-align: center;
+    }
+    h1{
+      font-size: 40px;
+      font-weight: 800;
+    }
+    p{
+      font-size: 20px;
+      font-weight: light;
+      color: #a6a6a6;
+    }
+  }
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

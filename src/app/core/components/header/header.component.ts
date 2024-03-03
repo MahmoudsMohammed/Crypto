@@ -13,7 +13,7 @@ export class header{
   selectedValue: string;
 
   currencies = [
-    {value: 'EGP', viewValue: 'Egyptian Pound'},
+    {value: 'SAR', viewValue: 'Saudi Arabia Riyal'},
     {value: 'USD', viewValue: 'American Dollar'},
     {value: 'EUR', viewValue: 'European Euro'},
   ];

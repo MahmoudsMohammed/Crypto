@@ -3,17 +3,18 @@
     <h1>Crypto Checker</h1>
     <p>check all the crypto currencies latest updates</p>
   </div>
-</div>
-
-<!-- Slider main container -->
 <div class="swiper">
-  <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
-    <!-- Slides -->
     <ng-container *ngFor="let currency of trendCurrencies">
       <div class="swiper-slide">
         <img [src]="currency.image" alt="">
+        <div class="info">
+          <span>{{currency.symbol|uppercase}}</span><br>
+          <span [ngClass]="{'decrease':currency.market_cap_change_percentage_24h < 0 ,'increase':currency.market_cap_change_percentage_24h >= 0  }">{{currency.market_cap_change_percentage_24h}}</span>
+        </div>
       </div>
     </ng-container>
   </div>
 </div>
+</div>
+

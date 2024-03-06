@@ -29,7 +29,7 @@ export class CurrenciesTableComponent {
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<CurrenciesTableItem>;
   dataSource: MatTableDataSource<currency>;
-  displayedColumns = ['symbol', 'price','changes',"market"];
+  displayedColumns = ['symbol', 'current_price','price_change_percentage_24h',"market_cap_change_24h"];
 
   constructor(private apiServ:apiService){
     this.apiServ.getCurrencies('eur').then(res=>res.json()).then(res=>{

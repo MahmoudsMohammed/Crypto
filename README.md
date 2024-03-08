@@ -1,11 +1,11 @@
-# Loan-Calculator
+# Crypto
 
-Loan Calculator Use To Calculate Loan Total Payment, Monthly Payment and Total Interest.
+App Displays the Cryptocurrencies Details and I built this app using Angular Material.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The Loan-Calculator features](#the-Loan-Calculator-features)
+  - [The Crypto features](#the-Crypto-features)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -15,7 +15,7 @@ Loan Calculator Use To Calculate Loan Total Payment, Monthly Payment and Total I
 
 ## Overview
 
-### The Loan-Calculator features
+### The Crypto features
 
 Users should be able to:
 
@@ -30,16 +30,17 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL : [Loan-Calculator](https://mahmoudsmohammed.github.io/Loan-Calculator/)
+- Live Site URL : [Crypto](https://crypto-bd392.web.app/home)
 
 ## My process
 
 ### Built with
 
-- HTML5
-- CSS3
+- Angular
+- Angular MAterial
 - SASS
-- JavaScript
+- TypeScript
+- Bootstrap
 
 ### What I learned
 

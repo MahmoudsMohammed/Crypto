@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableModule, MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
@@ -24,15 +24,23 @@ export interface UserData {
   standalone: true,
   imports: [MatTableModule, MatPaginatorModule, MatSortModule,MatFormFieldModule,MatInputModule,CommonModule]
 })
-export class CurrenciesTableComponent {
+export class CurrenciesTableComponent implements OnInit{
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   @ViewChild(MatTable) table: MatTable<CurrenciesTableItem>;
   dataSource: MatTableDataSource<currency>;
   displayedColumns = ['symbol', 'current_price','price_change_percentage_24h',"market_cap"];
+  selected:string;
 
   constructor(private apiServ:apiService){
-    this.apiServ.getCurrencies('eur').then(res=>res.json()).then(res=>{
+    this.apiServ.selected.subscribe(res=>{
+      this.selected = res;
+      console.log(res,'from table')
+    });
+  }
+
+  ngOnInit(): void {
+    this.apiServ.getCurrencies(this.selected).then(res=>res.json()).then(res=>{
       this.dataSource = new MatTableDataSource(res);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

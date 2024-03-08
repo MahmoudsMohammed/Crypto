@@ -3,9 +3,9 @@
     <span>Crypto <span>₿</span></span>
     <mat-form-field class="mt-4">
       <mat-label>Selected Currency</mat-label>
-      <mat-select name="currency">
+      <mat-select name="currency" (valueChange)="onCahnges($event)">
         @for (currency of currencies; track currency) {
-          <mat-option [value]="currency.value">{{currency.viewValue}}</mat-option>
+          <mat-option aria-selected="true" [value]="currency.value">{{currency.viewValue}}</mat-option>
         }
       </mat-select>
     </mat-form-field>

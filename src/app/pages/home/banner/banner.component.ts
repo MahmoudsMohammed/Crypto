@@ -17,7 +17,7 @@ export class BannerComponent implements AfterViewInit,OnInit {
   trendCurrencies:currency[]=[];
 
   ngOnInit(): void {
-    this.apiServ.getTrendingCurrencies("Eur").then(res=>res.json()).then(res=>this.trendCurrencies = res).catch(err=>console.log(err,'from banner component'));
+    this.apiServ.getTrendingCurrencies().then(res=>res.json()).then(res=>this.trendCurrencies = res).catch(err=>console.log(err,'from banner component'));
   }
 
   ngAfterViewInit(): void {

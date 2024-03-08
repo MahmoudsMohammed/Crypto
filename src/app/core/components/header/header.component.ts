@@ -1,6 +1,7 @@
-import { Component } from "@angular/core";
+import { Component} from "@angular/core";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
+import { apiService } from "../../../share/services/api.services";
 
 @Component({
   selector:'app-header',
@@ -10,11 +11,14 @@ import {MatSelectModule} from '@angular/material/select';
   standalone:true,
 })
 export class header{
-  selectedValue: string;
+  constructor(private apiServ:apiService){};
 
   currencies = [
-    {value: 'SAR', viewValue: 'Saudi Arabia Riyal'},
     {value: 'USD', viewValue: 'American Dollar'},
     {value: 'EUR', viewValue: 'European Euro'},
   ];
+
+  onCahnges(e:string){
+    this.apiServ.selected.next(e);
+  }
 }

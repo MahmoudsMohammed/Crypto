@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild } from '@angular/core';
 import { MatTableModule, MatTable, MatTableDataSource } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 import { MatSortModule, MatSort } from '@angular/material/sort';
@@ -8,6 +8,7 @@ import { currency } from '../../../share/models/currency.interface';
 import { apiService } from '../../../share/services/api.services';
 import {MatInputModule} from '@angular/material/input';
 import { CommonModule } from '@angular/common';
+import { communicateService } from '../../../share/services/communicate.services';
 
 
 export interface UserData {
@@ -32,8 +33,8 @@ export class CurrenciesTableComponent implements OnInit{
   displayedColumns = ['symbol', 'current_price','price_change_percentage_24h',"market_cap"];
   selected:string;
 
-  constructor(private apiServ:apiService){
-    this.apiServ.selected.subscribe(res=>{
+  constructor(private apiServ:apiService,private communicateServ:communicateService){
+    this.communicateServ.selected.subscribe(res=>{
       this.selected = res;
       console.log(res,'from table')
     });
@@ -54,5 +55,10 @@ export class CurrenciesTableComponent implements OnInit{
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  // one click on the row
+  onClick(row:currency){
+    console.log(row);
   }
 }

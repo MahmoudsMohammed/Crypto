@@ -2,6 +2,7 @@ import { Component} from "@angular/core";
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSelectModule} from '@angular/material/select';
 import { apiService } from "../../../share/services/api.services";
+import { communicateService } from "../../../share/services/communicate.services";
 
 @Component({
   selector:'app-header',
@@ -11,7 +12,7 @@ import { apiService } from "../../../share/services/api.services";
   standalone:true,
 })
 export class header{
-  constructor(private apiServ:apiService){};
+  constructor(private communicateServ:communicateService){};
 
   currencies = [
     {value: 'USD', viewValue: 'American Dollar'},
@@ -19,6 +20,6 @@ export class header{
   ];
 
   onCahnges(e:string){
-    this.apiServ.selected.next(e);
+    this.communicateServ.selected.next(e);
   }
 }

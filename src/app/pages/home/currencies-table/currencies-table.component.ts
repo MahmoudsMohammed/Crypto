@@ -36,7 +36,6 @@ export class CurrenciesTableComponent implements OnInit{
   constructor(private apiServ:apiService,private communicateServ:communicateService){
     this.communicateServ.selected.subscribe(res=>{
       this.selected = res;
-      console.log(res,'from table')
     });
   }
 
@@ -55,10 +54,5 @@ export class CurrenciesTableComponent implements OnInit{
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
-  }
-
-  // one click on the row
-  onClick(row:currency){
-    console.log(row);
   }
 }

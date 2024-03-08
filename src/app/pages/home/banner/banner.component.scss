@@ -14,15 +14,24 @@
       transform: translate(-50%,-50%);
       color: white;
       text-align: center;
+      max-width: 100%;
     }
     h1{
       font-size: 45px;
       font-weight: 800;
+      white-space: nowrap;
+      @media (max-width:600px) {
+        font-size: 30px;
+      }
     }
     p{
       font-size: 25px;
       font-weight: light;
       color: #a6a6a6;
+      max-width: 100%;
+      @media (max-width:600px) {
+        font-size: 20px;
+      }
     }
   }
   .swiper{

@@ -1,27 +1,56 @@
-# Crypto
+# Loan-Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+Loan Calculator Use To Calculate Loan Total Payment, Monthly Payment and Total Interest.
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The Loan-Calculator features](#the-Loan-Calculator-features)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+- [Author](#author)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### The Loan-Calculator features
 
-## Build
+Users should be able to:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Write the loan amount, interest, and years to repay then get the total payment, monthly payment, and total interest.
+- If you forget one of the input fields then the alert will appear to warn you.
 
-## Running unit tests
+### Screenshot
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Desktop view
 
-## Running end-to-end tests
+![](static/screen.jpeg)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Links
 
-## Further help
+- Live Site URL : [Loan-Calculator](https://mahmoudsmohammed.github.io/Loan-Calculator/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## My process
+
+### Built with
+
+- HTML5
+- CSS3
+- SASS
+- JavaScript
+
+### What I learned
+
+- How structure the project files.
+- Using Git and Github.
+- Use SASS and learn how to structure my files to be easy to debug.
+- SASS Placeholder and Variables which save a lot of time.
+- How to Manipulate Dom With JavaScript.
+- Using setTimeOut to Control of Execution.
+
+## Author
+
+- Linkedin - [Mahmoud Sayed](https://www.linkedin.com/in/mahmoud-sayed-b85536217/)
+- Codewars - [@MahmoudsMohammed](https://www.codewars.com/users/MahmoudsMohammed)

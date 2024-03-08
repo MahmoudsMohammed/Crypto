@@ -13,7 +13,7 @@ import { apiService } from '../../../share/services/api.services';
 import { MatInputModule } from '@angular/material/input';
 import { CommonModule } from '@angular/common';
 import { communicateService } from '../../../share/services/communicate.services';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 export interface UserData {
   id: string;
@@ -52,7 +52,8 @@ export class CurrenciesTableComponent implements OnInit {
   constructor(
     private apiServ: apiService,
     private communicateServ: communicateService,
-    private router: Router
+    private router: Router,
+    private activeRoute: ActivatedRoute
   ) {
     this.communicateServ.selected.subscribe((res) => {
       this.selected = res;
@@ -80,6 +81,8 @@ export class CurrenciesTableComponent implements OnInit {
   }
 
   onClick(row: currency) {
-    this.router.navigate(['details', row.id]);
+    this.router.navigate(['../', 'details', row.id], {
+      relativeTo: this.activeRoute,
+    });
   }
 }

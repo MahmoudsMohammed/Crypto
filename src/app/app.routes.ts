@@ -10,16 +10,9 @@ export const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'home',
-    loadComponent: () =>
-      import('../app/pages/home/home.component').then((m) => m.home),
+    path: 'layout',
+    loadChildren: () =>
+      import('../app/pages/pages.routes').then((m) => m.routes),
   },
-  {
-    path: 'details/:id',
-    loadComponent: () =>
-      import('../app/pages/details/details.component').then(
-        (m) => m.DetailsComponent
-      ),
-  },
-  { path: '**', redirectTo: '' },
+  // { path: '**', redirectTo: '' },
 ];

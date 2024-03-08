@@ -1,0 +1,22 @@
+* {
+  color: white;
+}
+.details {
+  img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0px auto 20px;
+  }
+  h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+  }
+  .info {
+    span:first-of-type {
+      font-weight: 800;
+      font-size: 20px;
+    }
+  }
+}

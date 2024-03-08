@@ -9,16 +9,17 @@ import { apiService } from '../../share/services/api.services';
   standalone: true,
 })
 export class DetailsComponent implements OnInit {
+  data;
   constructor(
     private activeRouter: ActivatedRoute,
     private apiServ: apiService
   ) {}
 
   ngOnInit() {
-    // this.apiServ
-    //   .getCurrencyById(this.activeRouter.snapshot.params['id'])
-    //   .subscribe((res) => {
-    //     console.log(res);
-    //   });
+    this.apiServ
+      .getCurrencyById(this.activeRouter.snapshot.params['id'])
+      .subscribe((res) => {
+        this.data = res;
+      });
   }
 }

@@ -15,7 +15,7 @@ import { Chart, registerables } from 'chart.js';
   imports: [CurrencyPipe, BaseChartDirective],
 })
 export class DetailsComponent implements OnInit {
-  data;
+  data = null;
   coinId: string;
   selectedCurrency: string;
   daysRange: number = 1;

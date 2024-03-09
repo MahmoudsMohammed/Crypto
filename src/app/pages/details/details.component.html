@@ -5,12 +5,17 @@
       <h2>{{ data.name }}</h2>
       <p>{{ data.description.en.split(".")[0] }}</p>
       <div class="info">
-        <span>Rank: </span
-        ><span class="value">{{ data.market_cap_rank }}</span>
+        <span>Rank: </span><span class="value">{{ data.market_cap_rank }}</span
+        ><br />
         <span>Current Price: </span
-        ><span class="value">{{ data.market_data.current_price.usd }}</span>
+        ><span class="value">{{
+          data.market_data.current_price.usd | currency : selectedCurrency
+        }}</span
+        ><br />
         <span>Market cap: </span
-        ><span class="value">{{ data.market_data.market_cap.usd }}</span>
+        ><span class="value">{{
+          data.market_data.market_cap.usd | currency : selectedCurrency
+        }}</span>
       </div>
     </div>
   </div>

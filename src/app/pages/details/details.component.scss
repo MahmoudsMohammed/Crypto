@@ -2,6 +2,9 @@
   color: white;
 }
 .details {
+  & {
+    border-right: 2px solid #a6a6a6;
+  }
   img {
     display: block;
     width: 120px;
@@ -14,8 +17,12 @@
     font-size: 35px;
   }
   .info {
-    span:first-of-type {
+    span:not(.value) {
       font-weight: 800;
+      font-size: 20px;
+    }
+    .value {
+      font-weight: 400;
       font-size: 20px;
     }
   }

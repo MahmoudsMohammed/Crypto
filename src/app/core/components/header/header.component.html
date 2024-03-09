@@ -1,11 +1,15 @@
-<mat-toolbar style="height: 80px;">
+<mat-toolbar style="height: 80px">
   <div class="container d-flex justify-content-between align-items-center">
-    <span>Crypto <span>₿</span></span>
+    <span style="cursor: pointer" routerLink="/layout/home"
+      >Crypto <span>₿</span></span
+    >
     <mat-form-field class="mt-4">
       <mat-label>Selected Currency</mat-label>
       <mat-select name="currency" (valueChange)="onCahnges($event)">
         @for (currency of currencies; track currency) {
-          <mat-option aria-selected="true" [value]="currency.value">{{currency.viewValue}}</mat-option>
+        <mat-option aria-selected="true" [value]="currency.value">{{
+          currency.viewValue
+        }}</mat-option>
         }
       </mat-select>
     </mat-form-field>

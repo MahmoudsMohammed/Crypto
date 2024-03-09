@@ -8,14 +8,21 @@
         <span>Rank: </span><span class="value">{{ data?.market_cap_rank }}</span
         ><br />
         <span>Current Price: </span
-        ><span class="value">{{
-          data?.market_data.current_price.usd | currency : selectedCurrency
-        }}</span
+        ><span class="value">
+          @if(selectedCurrency === 'EUR'){
+          {{ data?.market_data.current_price.eur | currency : "EUR" }}
+          }@else {
+          {{ data?.market_data.current_price.usd | currency : "USD" }}
+          } </span
         ><br />
         <span>Market cap: </span
-        ><span class="value">{{
-          data?.market_data.market_cap.usd | currency : selectedCurrency
-        }}</span>
+        ><span class="value">
+          @if(selectedCurrency === 'EUR'){
+          {{ data?.market_data.market_cap.eur | currency : "EUR" }}
+          }@else {
+          {{ data?.market_data.market_cap.usd | currency : "USD" }}
+          }</span
+        >
       </div>
     </div>
     <div class="col-md-7 mt-3">

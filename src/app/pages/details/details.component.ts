@@ -65,14 +65,12 @@ export class DetailsComponent implements OnInit {
     // get the using currency
     this.communicateSer.selected.subscribe((res) => {
       this.selectedCurrency = res;
+      this.getGraphData(this.daysRange);
+      console.log(res, 'from details');
     });
-    this.getGraphData(this.daysRange);
   }
 
   getGraphData(days) {
-    setTimeout(() => {
-      this.myLineChart.update();
-    }, 200);
     this.daysRange = days;
     this.apiServ
       .getGrpahicalCurrencyData(
@@ -81,6 +79,9 @@ export class DetailsComponent implements OnInit {
         this.daysRange
       )
       .subscribe((res) => {
+        setTimeout(() => {
+          this.myLineChart.update();
+        }, 200);
         this.lineChartData.datasets[0].data = res.prices.map((e) => e[1]);
         this.lineChartData.labels = res.prices.map((e) => {
           let date = new Date(e[0]);
@@ -88,7 +89,7 @@ export class DetailsComponent implements OnInit {
             date.getHours() > 12
               ? `${date.getHours() - 12} : ${date.getMinutes()} PM`
               : `${date.getHours()} : ${date.getMinutes()} AM`;
-          return this.daysRange ? time : date.toLocaleDateString();
+          return this.daysRange === 1 ? time : date.toLocaleDateString();
         });
       });
   }

@@ -5,6 +5,9 @@
   & {
     border-right: 2px solid #a6a6a6;
   }
+  @media (max-width: 767px) {
+    border-right: none;
+  }
   img {
     display: block;
     width: 120px;
@@ -25,5 +28,15 @@
       font-weight: 400;
       font-size: 20px;
     }
+  }
+}
+
+.buttons {
+  & {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  button {
+    border: 1px solid #a6a6a6;
   }
 }

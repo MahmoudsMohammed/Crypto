@@ -1,21 +1,44 @@
 <main class="container my-5">
   <div class="row">
-    <div class="col-md-3 details">
-      <img [src]="data.image.large" alt="" />
-      <h2>{{ data.name }}</h2>
-      <p>{{ data.description.en.split(".")[0] }}</p>
+    <div class="col-md-4 details">
+      <img [src]="data?.image.large" alt="" />
+      <h2>{{ data?.name }}</h2>
+      <p>{{ data?.description.en.split(".")[0] }}</p>
       <div class="info">
-        <span>Rank: </span><span class="value">{{ data.market_cap_rank }}</span
+        <span>Rank: </span><span class="value">{{ data?.market_cap_rank }}</span
         ><br />
         <span>Current Price: </span
         ><span class="value">{{
-          data.market_data.current_price.usd | currency : selectedCurrency
+          data?.market_data.current_price.usd | currency : selectedCurrency
         }}</span
         ><br />
         <span>Market cap: </span
         ><span class="value">{{
-          data.market_data.market_cap.usd | currency : selectedCurrency
+          data?.market_data.market_cap.usd | currency : selectedCurrency
         }}</span>
+      </div>
+    </div>
+    <div class="col-md-7 mt-3">
+      <canvas
+        style="width: 300px"
+        baseChart
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [type]="lineChartType"
+      ></canvas>
+      <div class="d-flex justify-content-around buttons">
+        <button (click)="getGraphData(1)" class="btn btn-custom">
+          24 hours
+        </button>
+        <button (click)="getGraphData(30)" class="btn btn-custom">
+          30 days
+        </button>
+        <button (click)="getGraphData(90)" class="btn btn-custom">
+          90 days
+        </button>
+        <button (click)="getGraphData(365)" class="btn btn-custom">
+          1 year
+        </button>
       </div>
     </div>
   </div>

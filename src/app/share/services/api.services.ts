@@ -15,9 +15,17 @@ export class apiService {
     return fetch(`../../../assets/api/trend.currencies.json`);
   }
 
+  // currency details
   getCurrencyById(coinId: string) {
     return this.http.get<any>(
       `https://api.coingecko.com/api/v3/coins/${coinId}`
+    );
+  }
+
+  // currency data for graph
+  getGrpahicalCurrencyData(coinId: string, currency: string, days: number) {
+    return this.http.get<any>(
+      `https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${currency}&days=${days}`
     );
   }
 }

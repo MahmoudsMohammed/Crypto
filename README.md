@@ -1,12 +1,12 @@
 # Crypto
 
-App Displays the Cryptocurrencies Details and I built this app using Angular Material.
+Single Page App using Angular and Angular Material that displays the cryptocurrencies.
 
 ## Table of contents
 
 - [Overview](#overview)
-  - [The Crypto features](#the-Crypto-features)
-  - [Screenshot](#screenshot)
+  - [Crypto features](#Crypto-features)
+  - [project Details](#Project-Details)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -15,41 +15,45 @@ App Displays the Cryptocurrencies Details and I built this app using Angular Mat
 
 ## Overview
 
-### The Crypto features
+### Crypto features
 
 Users should be able to:
 
-- Write the loan amount, interest, and years to repay then get the total payment, monthly payment, and total interest.
-- If you forget one of the input fields then the alert will appear to warn you.
+- See the trending cryptocurrencies in the slider at the banner.
+- See all the cryptocurrencies in the table and make operations on them like sorting, pagination, and filtering.
+- See the cryptocurrency details information by clicking on its row in the table.
+- See the dynamic chart which represents the cryptocurrency price change through different times (24h,30 days,90 days, and 1 year).
 
-### Screenshot
+## Project Details
 
-- Desktop view
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
 
-![](static/screen.jpeg)
+### Development server
 
-### Links
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-- Live Site URL : [Crypto](https://crypto-bd392.web.app/home)
+## Links
+
+- Live Site URL : [Crypto](https://crypto-bd392.web.app)
 
 ## My process
 
 ### Built with
 
 - Angular
-- Angular MAterial
-- SASS
+- Angular CLI
+- Angular Material
+- Chart.js
+- ng2-charts
+- SCSS
 - TypeScript
 - Bootstrap
 
 ### What I learned
 
-- How structure the project files.
-- Using Git and Github.
-- Use SASS and learn how to structure my files to be easy to debug.
-- SASS Placeholder and Variables which save a lot of time.
-- How to Manipulate Dom With JavaScript.
-- Using setTimeOut to Control of Execution.
+- How structure the project Folders and files.
+- Use Angular Material which saves a lot of time by using provided components. 
+- Use chart.js and ng2-charts to represent data on dynamic charts. 
 
 ## Author
 

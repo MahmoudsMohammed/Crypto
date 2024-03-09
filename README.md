@@ -23,6 +23,7 @@ Users should be able to:
 - See all the cryptocurrencies in the table and make operations on them like sorting, pagination, and filtering.
 - See the cryptocurrency details information by clicking on its row in the table.
 - See the dynamic chart which represents the cryptocurrency price change through different times (24h,30 days,90 days, and 1 year).
+- Change the App Currency to change all the results and chart values.
 
 ## Project Details
 
@@ -52,8 +53,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ### What I learned
 
 - How structure the project Folders and files.
-- Use Angular Material which saves a lot of time by using provided components. 
-- Use chart.js and ng2-charts to represent data on dynamic charts. 
+- Use Angular Material which saves a lot of time by using provided components.
+- Use chart.js and ng2-charts to represent data on dynamic charts.
+- Use services to handle API requests and communication between components.
+- How to build and deploy a single-page application.
 
 ## Author
 
